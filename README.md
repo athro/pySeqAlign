@@ -4,6 +4,17 @@ Sequence alignment library with Prolog-style distance functions and ILP-based ru
 
 pySeqAlign provides Smith-Waterman (local) and Needleman-Wunsch (global) sequence alignment algorithms with pluggable distance/scoring functions. Distance functions can be defined natively in Python, via Prolog predicates, or *learned from data* using Inductive Logic Programming (ILP). This enables alignment of structured logical atoms beyond simple character or amino acid sequences.
 
+> **Install:** the package is published on PyPI as **`pyseqalignment`**
+> (the name `pyseqalign` was blocked by PyPI's name-similarity guard). The
+> import package is `pyseqalign`:
+>
+> ```bash
+> pip install pyseqalignment
+> ```
+> ```python
+> import pyseqalign
+> ```
+
 ## Features
 
 - **Smith-Waterman** local alignment with k-best non-overlapping results
