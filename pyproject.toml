@@ -33,12 +33,17 @@ dependencies = [
 prolog = [
     "janus_swi>=1.5",
 ]
+# NOTE: the maintained Popper ILP system is not published on PyPI, so it
+# cannot be declared as a dependency here (PyPI forbids direct-URL deps).
+# These extras install Popper's solver (clingo); install Popper itself with:
+#   pip install git+https://github.com/logic-and-learning-lab/Popper@main
+# See the README "ILP Backends" section.
 popper = [
-    "popper-ilp @ git+https://github.com/logic-and-learning-lab/Popper@main",
+    "clingo>=5.6",
 ]
 learning = [
     "janus_swi>=1.5",
-    "popper-ilp @ git+https://github.com/logic-and-learning-lab/Popper@main",
+    "clingo>=5.6",
 ]
 dev = [
     "pytest>=7.0",

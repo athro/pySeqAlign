@@ -82,10 +82,11 @@ pip install -e .
 # Prolog-based distance functions (requires SWI-Prolog)
 pip install -e ".[prolog]"
 
-# Popper ILP backend (requires SWI-Prolog + Clingo)
+# Popper ILP backend's solver (Clingo). The Popper system itself is not on
+# PyPI -- install it separately (see the note below).
 pip install -e ".[popper]"
 
-# All learning backends (Aleph + Popper)
+# Prolog + Clingo for the ILP backends (Popper installed separately)
 pip install -e ".[learning]"
 
 # Development tools (pytest, ruff, mypy)
@@ -105,9 +106,15 @@ pip install -r requirements.txt
 > removed from `setuptools>=81`. If you are on Python 3.14, install
 > `setuptools<81` before Popper: `pip install 'setuptools<81'`.
 >
-> **Note:** The `popper-ilp` package on PyPI is outdated (v1.1.0, 2021).
-> The project dependency points to the actively maintained
-> [GitHub repository](https://github.com/logic-and-learning-lab/Popper) (v4.2.0+).
+> **Note:** Popper is **not available on PyPI**, so it cannot be a declared
+> dependency (PyPI forbids direct-URL deps). The `popper`/`learning` extras
+> install its solver (Clingo); install the Popper system itself from the
+> actively maintained [GitHub repository](https://github.com/logic-and-learning-lab/Popper)
+> (v4.2.0+):
+>
+> ```bash
+> pip install git+https://github.com/logic-and-learning-lab/Popper@main
+> ```
 
 ## Quick Start
 
