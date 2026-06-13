@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.1
+
+### Fixed
+- Aleph backend now loads on SWI-Prolog 10. `init(swi)` called
+  `arithmetic_function/1` as a goal, which SWI 10 rejects ("can only be used
+  in a directive"); this aborted initialisation so `gc/0` (and other helpers)
+  were never asserted and Aleph failed to load. SWI's native `is inf` makes the
+  custom arithmetic function unnecessary, so the offending goal was removed.
+  Enables Aleph `induce_tree` regression (used by pyREAL's boosting backend).
+
 ## 0.1.0
 
 Initial release -- pure Python rewrite of the legacy pyAlign and pySeqAlign libraries.

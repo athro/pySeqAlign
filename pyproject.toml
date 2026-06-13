@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 # PyPI distribution name (the import package is `pyseqalign`; the name
 # `pyseqalign` was blocked by PyPI's similarity guard vs. an existing project).
 name = "pyseqalignment"
-version = "0.1.0"
+version = "0.1.1"
 description = "pySeqAlign -- sequence alignment with Prolog-style distance functions and ILP learning"
 readme = "README.md"
 license = "MIT"

@@ -67,7 +67,10 @@ init(swi):-
 	dynamic(false/0),
 	dynamic(example/3),
 	assert((aleph_random(X):- I = 1000000, X is float(random(I-1))/float(I))),
-	arithmetic_function(inf/0), assert(inf(1e10)),
+	% SWI 10 fix: 'is inf' is native float infinity; the old custom
+	% arithmetic_function(inf/0) throws ("can only be used in a directive")
+	% and aborts init(swi), leaving gc/system/etc. unasserted. Drop it.
+	true,
 	assert((gc:- garbage_collect)),
 	assert((depth_bound_call(G,L):-
 			call_with_depth_limit(G,L,R),
