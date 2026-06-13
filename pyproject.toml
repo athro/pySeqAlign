@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyaligner"
+version = "0.1.0"
+description = "Sequence alignment with Prolog-style distance functions"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Andreas Karwath", email = "a.karwath@bham.ac.uk" },
+]
+keywords = ["sequence-alignment", "prolog", "smith-waterman", "needleman-wunsch", "bioinformatics", "ilp", "inductive-logic-programming"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+prolog = [
+    "janus_swi>=1.5",
+]
+popper = [
+    "popper-ilp @ git+https://github.com/logic-and-learning-lab/Popper@main",
+]
+learning = [
+    "janus_swi>=1.5",
+    "popper-ilp @ git+https://github.com/logic-and-learning-lab/Popper@main",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/athro/pyaligner"
+Repository = "https://github.com/athro/pyaligner"
+Issues = "https://github.com/athro/pyaligner/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"pyaligner.prolog.knowledge" = ["*.pl"]
+"pyaligner.learning.aleph_files" = ["*.pl"]
+"pyaligner.scoring.matrix_data" = ["*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
