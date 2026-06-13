@@ -6,10 +6,10 @@ examples, and bias declarations needed by ILP learners.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
-from pyaligner.learning.base import ILPTask
+from pyseqalign.learning.base import ILPTask
 
 
 def _seq_to_prolog_list(seq: Sequence[int]) -> str:
@@ -116,13 +116,13 @@ class AlignmentTaskBuilder:
         """
         self._bias.extend([
             f":- modeh(1, {label}(+pair)).",
-            f":- modeb(*, seq1(+pair, -list)).",
-            f":- modeb(*, seq2(+pair, -list)).",
-            f":- modeb(*, member(-int, +list)).",
-            f":- modeb(1, length(+list, -int)).",
-            f":- modeb(1, sw_score(+pair, -float)).",
-            f":- modeb(1, nw_score(+pair, -float)).",
-            f":- modeb(1, score_above(+float, #float)).",
+            ":- modeb(*, seq1(+pair, -list)).",
+            ":- modeb(*, seq2(+pair, -list)).",
+            ":- modeb(*, member(-int, +list)).",
+            ":- modeb(1, length(+list, -int)).",
+            ":- modeb(1, sw_score(+pair, -float)).",
+            ":- modeb(1, nw_score(+pair, -float)).",
+            ":- modeb(1, score_above(+float, #float)).",
             f":- determination({label}/1, seq1/2).",
             f":- determination({label}/1, seq2/2).",
             f":- determination({label}/1, member/2).",

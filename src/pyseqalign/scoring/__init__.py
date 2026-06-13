@@ -1,7 +1,7 @@
 """Scoring and distance functions for sequence alignment."""
 
-from pyaligner.scoring.distance import AtomDistance, SimpleMatch
-from pyaligner.scoring.matrices import Blosum50, SubstitutionMatrix
+from pyseqalign.scoring.distance import AtomDistance, SimpleMatch
+from pyseqalign.scoring.matrices import Blosum50, SubstitutionMatrix
 
 __all__ = [
     "Blosum50",

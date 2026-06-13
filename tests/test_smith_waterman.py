@@ -1,7 +1,7 @@
 """Tests for Smith-Waterman local alignment."""
 
-from pyaligner import SmithWaterman
-from pyaligner.scoring import Blosum50, SimpleMatch
+from pyseqalign import SmithWaterman
+from pyseqalign.scoring import Blosum50, SimpleMatch
 
 
 def test_identical_sequences():

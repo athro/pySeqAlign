@@ -17,7 +17,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from pyaligner.learning.base import ILPTask, LearnedProgram
+from pyseqalign.learning.base import ILPTask, LearnedProgram
 
 
 class AlephLearner:
@@ -27,7 +27,7 @@ class AlephLearner:
 
     Args:
         aleph_path: Path to the ``aleph_swi_ak.pl`` file.  Defaults to the
-            bundled version shipped with pyaligner.
+            bundled version shipped with pyseqalign.
         swipl_cmd: Command to invoke SWI-Prolog (default ``"swipl"``).
         induce_mode: Aleph induction mode.  One of ``"induce"``,
             ``"induce_max"``, ``"induce_cover"``, ``"induce_tree"``,
@@ -73,7 +73,7 @@ class AlephLearner:
         Writes the task to temporary files, invokes SWI-Prolog with Aleph,
         and parses the output for learned clauses.
         """
-        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyaligner_aleph_"))
+        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyseqalign_aleph_"))
         work_dir = Path(work_dir)
         work_dir.mkdir(parents=True, exist_ok=True)
 

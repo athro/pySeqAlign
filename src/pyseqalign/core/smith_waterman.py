@@ -6,10 +6,9 @@ Computes the k best non-overlapping local alignments between two sequences.
 
 from __future__ import annotations
 
-import math
 from typing import Protocol
 
-from pyaligner.core.alignment import LocalAlignmentResult, KLocalAlignmentResults
+from pyseqalign.core.alignment import KLocalAlignmentResults, LocalAlignmentResult
 
 
 class ScoringFunction(Protocol):

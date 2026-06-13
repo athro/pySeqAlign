@@ -7,7 +7,7 @@ directly to ``SmithWaterman`` or ``NeedlemanWunsch``.
 
 Requires the ``prolog`` optional dependency::
 
-    pip install pyaligner[prolog]
+    pip install pyseqalign[prolog]
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ class PrologEngine:
         except ImportError as exc:
             raise ImportError(
                 "janus_swi is required for Prolog support. "
-                "Install with: pip install pyaligner[prolog]"
+                "Install with: pip install pyseqalign[prolog]"
             ) from exc
 
     def consult(self, path: str | Path) -> None:

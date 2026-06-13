@@ -12,8 +12,8 @@ actually run the learner you need Popper or SWI-Prolog installed.
 import tempfile
 from pathlib import Path
 
-from pyaligner.learning import AlignmentTaskBuilder
-from pyaligner.utils.helpers import encode_sequence
+from pyseqalign.learning import AlignmentTaskBuilder
+from pyseqalign.utils.helpers import encode_sequence
 
 # ---- Build training data from amino acid sequences ----
 
@@ -87,13 +87,13 @@ with tempfile.TemporaryDirectory() as tmpdir:
 
 # ---- To actually run learning (requires Popper or SWI-Prolog) ----
 #
-# from pyaligner.learning.popper import PopperLearner
+# from pyseqalign.learning.popper import PopperLearner
 # learner = PopperLearner(timeout=60)
 # result = learner.learn(task)
 # print(result.program_text)
 #
 # Or with Aleph:
-# from pyaligner.learning.aleph import AlephLearner
+# from pyseqalign.learning.aleph import AlephLearner
 # learner = AlephLearner(induce_mode="induce")
 # result = learner.learn(task)
 # print(result.program_text)

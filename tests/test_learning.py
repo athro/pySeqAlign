@@ -8,8 +8,8 @@ separately with integration tests.
 import tempfile
 from pathlib import Path
 
-from pyaligner.learning.base import ILPTask, LearnedProgram
-from pyaligner.learning.task_builder import AlignmentTaskBuilder
+from pyseqalign.learning.base import ILPTask, LearnedProgram
+from pyseqalign.learning.task_builder import AlignmentTaskBuilder
 
 
 class TestILPTask:
@@ -150,7 +150,7 @@ class TestAlephLearner:
     """Unit tests for AlephLearner that don't require SWI-Prolog."""
 
     def test_parse_output_from_rules(self):
-        from pyaligner.learning.aleph import AlephLearner
+        from pyseqalign.learning.aleph import AlephLearner
 
         raw = """
 [Rule 1]
@@ -170,11 +170,11 @@ similar(A) :-
         import pytest
 
         with pytest.raises(ValueError, match="Unknown induce_mode"):
-            from pyaligner.learning.aleph import AlephLearner
+            from pyseqalign.learning.aleph import AlephLearner
             AlephLearner(induce_mode="invalid_mode")
 
     def test_valid_modes(self):
-        from pyaligner.learning.aleph import AlephLearner
+        from pyseqalign.learning.aleph import AlephLearner
 
         for mode in AlephLearner.VALID_MODES:
             learner = AlephLearner(induce_mode=mode)

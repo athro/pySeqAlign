@@ -1,13 +1,13 @@
 """Pairwise matching example.
 
-Reproduces the legacy swAlign_demo2.py using the new pyaligner API.
+Reproduces the legacy swAlign_demo2.py using the new pyseqalign API.
 Generates random sequences and finds the best pairwise match for each.
 """
 
 import random
 
-from pyaligner import SmithWaterman
-from pyaligner.scoring import Blosum50
+from pyseqalign import SmithWaterman
+from pyseqalign.scoring import Blosum50
 
 random.seed(1)
 

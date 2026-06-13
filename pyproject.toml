@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyaligner"
+name = "pySeqAlign"
 version = "0.1.0"
-description = "Sequence alignment with Prolog-style distance functions"
+description = "Sequence alignment with Prolog-style distance functions and ILP learning"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
@@ -48,17 +48,17 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/athro/pyaligner"
-Repository = "https://github.com/athro/pyaligner"
-Issues = "https://github.com/athro/pyaligner/issues"
+Homepage = "https://github.com/athro/pySeqAlign"
+Repository = "https://github.com/athro/pySeqAlign"
+Issues = "https://github.com/athro/pySeqAlign/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-"pyaligner.prolog.knowledge" = ["*.pl"]
-"pyaligner.learning.aleph_files" = ["*.pl"]
-"pyaligner.scoring.matrix_data" = ["*"]
+"pyseqalign.prolog.knowledge" = ["*.pl"]
+"pyseqalign.learning.aleph_files" = ["*.pl"]
+"pyseqalign.scoring.matrix_data" = ["*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

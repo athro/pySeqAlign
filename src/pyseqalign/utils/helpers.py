@@ -5,7 +5,7 @@ Ported from the legacy aminoAcids.pl mappings and C helper functions.
 
 from __future__ import annotations
 
-from pyaligner.scoring.matrices import AMINO_ACIDS
+from pyseqalign.scoring.matrices import AMINO_ACIDS
 
 # Build lookup tables from the canonical amino acid list.
 _AA_TO_ID: dict[str, int] = {aa: idx for idx, aa in enumerate(AMINO_ACIDS)}

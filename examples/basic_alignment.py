@@ -1,12 +1,12 @@
 """Basic alignment example.
 
-Reproduces the legacy swAlign_demo.py using the new pyaligner API.
+Reproduces the legacy swAlign_demo.py using the new pyseqalign API.
 Aligns HEAGAWGHEE against PAWHEAE using Smith-Waterman with BLOSUM50.
 """
 
-from pyaligner import SmithWaterman, NeedlemanWunsch
-from pyaligner.scoring import Blosum50
-from pyaligner.utils.helpers import encode_sequence, decode_sequence
+from pyseqalign import SmithWaterman, NeedlemanWunsch
+from pyseqalign.scoring import Blosum50
+from pyseqalign.utils.helpers import encode_sequence, decode_sequence
 
 # Encode amino acid sequences to integer IDs.
 seq1 = encode_sequence("HEAGAWGHEE")

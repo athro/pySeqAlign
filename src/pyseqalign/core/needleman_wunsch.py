@@ -5,8 +5,8 @@ Translated from the legacy C implementation in pyAlign.c.
 
 from __future__ import annotations
 
-from pyaligner.core.alignment import AlignmentResult
-from pyaligner.core.smith_waterman import ScoringFunction
+from pyseqalign.core.alignment import AlignmentResult
+from pyseqalign.core.smith_waterman import ScoringFunction
 
 
 class NeedlemanWunsch:

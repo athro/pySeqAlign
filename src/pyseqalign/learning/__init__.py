@@ -9,8 +9,8 @@ alignment rules from example alignments.  Two backends are supported:
   failures using ASP/SAT solvers.  Recommended for new projects.
 """
 
-from pyaligner.learning.base import ILPTask, LearnedProgram, ILPLearner
-from pyaligner.learning.task_builder import AlignmentTaskBuilder
+from pyseqalign.learning.base import ILPLearner, ILPTask, LearnedProgram
+from pyseqalign.learning.task_builder import AlignmentTaskBuilder
 
 __all__ = [
     "ILPTask",

@@ -2,7 +2,7 @@
 
 import pytest
 
-from pyaligner.scoring import Blosum50, SimpleMatch, AtomDistance, SubstitutionMatrix
+from pyseqalign.scoring import Blosum50, SimpleMatch, AtomDistance, SubstitutionMatrix
 
 
 class TestBlosum50:
@@ -136,8 +136,8 @@ R -1  5
 
     def test_use_with_smith_waterman(self):
         """SubstitutionMatrix works as a drop-in ScoringFunction."""
-        from pyaligner import SmithWaterman
-        from pyaligner.utils.helpers import encode_sequence
+        from pyseqalign import SmithWaterman
+        from pyseqalign.utils.helpers import encode_sequence
 
         scoring = SubstitutionMatrix.from_bundled("BLOSUM62")
         sw = SmithWaterman(scoring=scoring, gap_penalty=8.0)

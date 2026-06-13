@@ -1,6 +1,6 @@
 """Tests for utility functions."""
 
-from pyaligner.utils.helpers import amino_acid_to_id, id_to_amino_acid, encode_sequence, decode_sequence
+from pyseqalign.utils.helpers import amino_acid_to_id, id_to_amino_acid, encode_sequence, decode_sequence
 
 
 def test_amino_acid_roundtrip():

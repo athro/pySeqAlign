@@ -1,8 +1,8 @@
-# pyAligner
+# pySeqAlign
 
 Sequence alignment library with Prolog-style distance functions and ILP-based rule learning.
 
-pyAligner provides Smith-Waterman (local) and Needleman-Wunsch (global) sequence alignment algorithms with pluggable distance/scoring functions. Distance functions can be defined natively in Python, via Prolog predicates, or *learned from data* using Inductive Logic Programming (ILP). This enables alignment of structured logical atoms beyond simple character or amino acid sequences.
+pySeqAlign provides Smith-Waterman (local) and Needleman-Wunsch (global) sequence alignment algorithms with pluggable distance/scoring functions. Distance functions can be defined natively in Python, via Prolog predicates, or *learned from data* using Inductive Logic Programming (ILP). This enables alignment of structured logical atoms beyond simple character or amino acid sequences.
 
 ## Features
 
@@ -39,11 +39,11 @@ sudo apt install swi-prolog gringo
 pyenv install 3.13.9
 
 # Create a pyenv virtualenv
-pyenv virtualenv 3.13.9 pyaligner-env
+pyenv virtualenv 3.13.9 pyseqalign-env
 
 # Activate it for this project directory
-cd pyAligner
-pyenv local pyaligner-env
+cd pySeqAlign
+pyenv local pyseqalign-env
 
 # Install all dependencies
 pip install -r requirements.txt
@@ -51,13 +51,13 @@ pip install -e ".[learning,dev]"
 
 # Register the Jupyter kernel so notebooks can use this environment
 pip install ipykernel
-python -m ipykernel install --user --name pyaligner-env --display-name "Python (pyAligner)"
+python -m ipykernel install --user --name pyseqalign-env --display-name "Python (pySeqAlign)"
 ```
 
 ### Setting up with venv (system Python)
 
 ```bash
-cd pyAligner
+cd pySeqAlign
 python3 -m venv .venv
 source .venv/bin/activate    # Linux / macOS
 # .venv\Scripts\activate     # Windows
@@ -68,7 +68,7 @@ pip install -e ".[learning,dev]"
 
 # Register the Jupyter kernel
 pip install ipykernel
-python -m ipykernel install --user --name pyaligner-env --display-name "Python (pyAligner)"
+python -m ipykernel install --user --name pyseqalign-env --display-name "Python (pySeqAlign)"
 ```
 
 ### Optional dependencies
@@ -112,8 +112,8 @@ pip install -r requirements.txt
 ## Quick Start
 
 ```python
-from pyaligner import SmithWaterman, NeedlemanWunsch
-from pyaligner.scoring import Blosum50
+from pyseqalign import SmithWaterman, NeedlemanWunsch
+from pyseqalign.scoring import Blosum50
 
 # Local alignment with BLOSUM50 scoring
 sw = SmithWaterman(scoring=Blosum50(), gap_penalty=-8.0)
@@ -133,7 +133,7 @@ print(f"Score: {result.score}")
 ### Substitution Matrices
 
 ```python
-from pyaligner.scoring import SubstitutionMatrix
+from pyseqalign.scoring import SubstitutionMatrix
 
 # Load a bundled matrix by name
 blosum62 = SubstitutionMatrix.from_bundled("BLOSUM62")
@@ -157,7 +157,7 @@ print(SubstitutionMatrix.list_bundled())
 ### Using Prolog Distance Functions
 
 ```python
-from pyaligner.prolog import PrologEngine
+from pyseqalign.prolog import PrologEngine
 
 engine = PrologEngine()
 engine.consult("my_distances.pl")
@@ -169,8 +169,8 @@ results = sw.align(seq1, seq2)
 ### Learning Alignment Rules with ILP
 
 ```python
-from pyaligner.learning import AlignmentTaskBuilder
-from pyaligner.learning.popper import PopperLearner
+from pyseqalign.learning import AlignmentTaskBuilder
+from pyseqalign.learning.popper import PopperLearner
 
 # Build an ILP task from labelled sequence pairs.
 builder = AlignmentTaskBuilder()
@@ -190,7 +190,7 @@ print(result.program_text)
 Or using the classic Aleph backend:
 
 ```python
-from pyaligner.learning.aleph import AlephLearner
+from pyseqalign.learning.aleph import AlephLearner
 
 builder = AlignmentTaskBuilder()
 # ... add examples ...
@@ -205,9 +205,9 @@ print(result.program_text)
 ## Project Structure
 
 ```
-pyAligner/
+pySeqAlign/
 ├── src/
-│   └── pyaligner/
+│   └── pyseqalign/
 │       ├── core/              # Alignment algorithms (SW, NW)
 │       ├── prolog/            # Prolog engine integration
 │       │   └── knowledge/     # Prolog knowledge bases (.pl files)
@@ -254,7 +254,7 @@ For reference, other notable systems in the field include:
 
 ## Background
 
-This is a modern Python rewrite of the legacy pyAlign and pySeqAlign libraries. pyAlign used SWIG-wrapped C code with YAP Prolog bindings for alignment. pySeqAlign contained the Aleph ILP framework for learning rules from alignment examples. The new version is pure Python with optional SWI-Prolog integration via [Janus](https://www.swi-prolog.org/packs/list?p=janus) (the modern Python-Prolog bridge, replacing the older pyswip).
+**pySeqAlign** is a modern, pure-Python reimplementation that revives the name of one of its own ancestors. It succeeds two legacy libraries behind the ILP 2006 / ICDM 2008 work: the original **pyAlign** (SWIG-wrapped C with YAP Prolog bindings for alignment) and the original **pySeqAlign** (which held the Aleph ILP framework for learning rules from alignment examples). This version is pure Python, with optional SWI-Prolog integration via [Janus](https://www.swi-prolog.org/packs/list?p=janus) (the modern Python-Prolog bridge, replacing the older pyswip).
 
 ## License
 

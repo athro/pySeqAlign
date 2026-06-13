@@ -25,7 +25,7 @@ import importlib
 import tempfile
 from pathlib import Path
 
-from pyaligner.learning.base import ILPTask, LearnedProgram
+from pyseqalign.learning.base import ILPTask, LearnedProgram
 
 
 class PopperLearner:
@@ -80,10 +80,10 @@ class PopperLearner:
         Writes the task to Popper's expected directory format, calls the
         Popper learning loop, and returns the result.
         """
-        from popper.util import Settings
         from popper.loop import learn_solution
+        from popper.util import Settings
 
-        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyaligner_popper_"))
+        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyseqalign_popper_"))
         work_dir = Path(work_dir)
         work_dir.mkdir(parents=True, exist_ok=True)
 
@@ -164,7 +164,7 @@ class PopperFallbackLearner:
         """Run Popper via subprocess."""
         import subprocess
 
-        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyaligner_popper_"))
+        work_dir = task.work_dir or Path(tempfile.mkdtemp(prefix="pyseqalign_popper_"))
         work_dir = Path(work_dir)
         work_dir.mkdir(parents=True, exist_ok=True)
 

@@ -1,7 +1,7 @@
 """Tests for Needleman-Wunsch global alignment."""
 
-from pyaligner import NeedlemanWunsch
-from pyaligner.scoring import Blosum50, SimpleMatch
+from pyseqalign import NeedlemanWunsch
+from pyseqalign.scoring import Blosum50, SimpleMatch
 
 
 def test_identical_sequences():
