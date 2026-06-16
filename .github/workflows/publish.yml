@@ -21,10 +21,15 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Build sdist and wheel
+      - name: Build sdist
+        # sdist only (no wheel): the package ships an OPTIONAL C++ accelerator
+        # that must be compiled for the target machine's Python/ABI/platform.
+        # Publishing an sdist lets every `pip install` build from source and
+        # best-effort-compile the accelerator locally (setup.py); pure-Python
+        # installs still succeed if there's no compiler.
         run: |
           python -m pip install --upgrade build
-          python -m build
+          python -m build --sdist
 
       - name: Check distributions
         run: |

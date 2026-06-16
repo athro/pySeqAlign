@@ -4,7 +4,7 @@ from pyseqalign.core.alignment import AlignmentResult, LocalAlignmentResult
 from pyseqalign.core.needleman_wunsch import NeedlemanWunsch
 from pyseqalign.core.smith_waterman import SmithWaterman
 
-__version__ = "0.1.0"
+__version__ = "0.1.3"
 
 __all__ = [
     "SmithWaterman",

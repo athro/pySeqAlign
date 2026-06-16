@@ -275,15 +275,31 @@ For reference, other notable systems in the field include:
 
 The pure-Python aligners are fine for typical use. For heavy workloads (e.g.
 boosting that re-aligns thousands of sequence pairs per iteration), an optional
-**C++ affine-gap Needleman-Wunsch** kernel is provided. It is NOT built by default
-(the core stays pure Python); build it once with a C++ compiler + pybind11:
+**C++ affine-gap Needleman-Wunsch** kernel is provided.
+
+**It is compiled automatically at install time** (best effort). The package is
+distributed as an sdist, so `pip install pyseqalignment` builds from source and
+tries to compile the accelerator for your Python/ABI/platform using a C++
+compiler + pybind11 (pulled in as a build dependency). On macOS/Linux with a
+compiler present this "just works"; if no compiler is available the install
+still succeeds and the library falls back to the pure-Python aligner. Check with:
+
+```python
+from pyseqalign.accel import cpp_available
+print(cpp_available())   # True if the accelerator compiled at install
+```
+
+If you installed without a compiler and later want the accelerator, install one
+(Xcode Command Line Tools on macOS, `build-essential` on Debian/Ubuntu) and
+either reinstall (`pip install --force-reinstall --no-binary :all: pyseqalignment`)
+or build it in place once:
 
 ```bash
 pip install pybind11
 src/pyseqalign/cpp/build_cpp_aligner.sh          # or: PY=$(which python) src/.../build_cpp_aligner.sh
 ```
 
-This compiles the extension into the `pyseqalign` package. Then:
+Either way it compiles the extension into the `pyseqalign` package. Then:
 
 ```python
 from pyseqalign.accel import cpp_available, load
