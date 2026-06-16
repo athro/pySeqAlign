@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 # PyPI distribution name (the import package is `pyseqalign`; the name
 # `pyseqalign` was blocked by PyPI's similarity guard vs. an existing project).
 name = "pyseqalignment"
-version = "0.1.3"
+version = "0.1.4"
 description = "pySeqAlign -- sequence alignment with Prolog-style distance functions and ILP learning"
 readme = "README.md"
 license = "MIT"
@@ -80,6 +80,11 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP"]
+ignore = [
+    "N803",  # uppercase argument names (matrix math convention: M, Ix, Iy)
+    "N806",  # uppercase local variables in functions (same reason)
+    "E741",  # ambiguous variable name 'l' (used in tree (m, l, r) unpacking)
+]
 
 [tool.mypy]
 python_version = "3.10"

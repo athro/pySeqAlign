@@ -23,6 +23,19 @@ class AlignmentResult:
 
 
 @dataclass
+class AffineAlignmentResult(AlignmentResult):
+    """Extended result from affine-gap alignment.
+
+    Attributes:
+        gap_opens: Number of gap-open events in both sequences combined.
+        gap_extensions: Number of gap-extension events.
+    """
+
+    gap_opens: int = 0
+    gap_extensions: int = 0
+
+
+@dataclass
 class LocalAlignmentResult:
     """Result of a single local (Smith-Waterman) alignment.
 

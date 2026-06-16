@@ -1,0 +1,9 @@
+# Balloon NLP running example -- Karwath & Kersting (ILP 2006), Example 1 + Table 1.
+# Five sentences adapted from Barzilay & Lee (2003), Brill POS-tagged as pred(word).
+# Sentence 1 matches the paper's Example 1 verbatim; 2-5 are tagged consistently
+# from Table 1's sentences. id <TAB> space-separated atoms.
+s1	dt(a) jj(purple) nn(latex) nn(balloon) vbd(blew) prp(himself) in(up) in(in) dt(a) jj(southern) nn(city) nnp(wednesday) comma vbg(bursting) cd(two) jj(other) nns(balloons) cc(and) vbg(deforming) cd(27)
+s2	dt(a) nn(latex) nn(balloon) vbd(blew) prp(himself) in(up) in(in) dt(the) nn(area) in(of) nnp(freiburg) comma in(on) nnp(sunday) comma vbg(bursting) prp(itself) cc(and) vbg(disfiguring) cd(seven) nns(balloons)
+s3	dt(a) nn(latex) nn(balloon) vbd(blew) prp(himself) in(up) in(in) dt(the) jj(coastal) nn(resort) in(of) nnp(cuxhaven) comma vbg(bursting) cd(three) jj(other) nns(balloons) cc(and) vbg(deforming) nns(dozens) rbr(more)
+s4	dt(a) jj(purple) nn(latex) nn(balloon) vbd(blew) prp(himself) in(up) in(in) dt(a) nn(garden) nn(cafe) in(on) nnp(saturday) comma vbg(bursting) cd(10) nns(balloons) cc(and) vbg(deforming) cd(54)
+s5	dt(a) nn(latex) nn(balloon) vbd(blew) prp(himself) in(up) in(in) dt(the) nn(centre) in(of) nnp(berlin) in(on) nnp(sunday) comma vbg(bursting) cd(three) nns(balloons) rb(as) rb(well) in(as) prp(itself) cc(and) vbg(disfiguring) cd(40)

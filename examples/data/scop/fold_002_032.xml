@@ -1,0 +1,238 @@
+<sequences>
+	<sequence id="d3vub__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1qp2a_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1dj7b_">
+		<atom>s(a,m)</atom>
+		<atom>s(n,s)</atom>
+		<atom>s(a,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,s)</atom>
+		<atom>s(a,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1bbza_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1ckaa_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1vie__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1sema_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1gria1">
+		<atom>s(a,m)</atom>
+		<atom>s(a,s)</atom>
+		<atom>s(p,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1awx__">
+		<atom>s(n,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(p,m)</atom>
+	</sequence>
+	<sequence id="d1psf__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d2hsp__">
+		<atom>s(n,s)</atom>
+		<atom>s(a,s)</atom>
+		<atom>s(n,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1bkb_1">
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d1rlpc_">
+		<atom>s(a,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1shfa_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1ihva_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d1gbqa_">
+		<atom>s(a,m)</atom>
+		<atom>s(n,s)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(p,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d1ycsb2">
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1lcka1">
+		<atom>s(n,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(p,m)</atom>
+		<atom>h(t,r,s)</atom>
+	</sequence>
+	<sequence id="d1bb9__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(a,r,s)</atom>
+		<atom>h(a,r,s)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d1neb__">
+		<atom>s(a,s)</atom>
+		<atom>s(n,s)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(p,m)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1pht__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(a,r,s)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,l)</atom>
+	</sequence>
+	<sequence id="d2ptk_1">
+		<atom>s(a,m)</atom>
+		<atom>s(a,s)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1aboa_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1cska_">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1pks__">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>h(a,r,s)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(p,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d2eifa1">
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(n,m)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,l)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+	</sequence>
+	<sequence id="d1qcfa1">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+	<sequence id="d1fmk_1">
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(a,m)</atom>
+		<atom>s(n,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>s(a,s)</atom>
+	</sequence>
+</sequences>

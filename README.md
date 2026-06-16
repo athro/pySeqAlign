@@ -18,7 +18,9 @@ pySeqAlign provides Smith-Waterman (local) and Needleman-Wunsch (global) sequenc
 ## Features
 
 - **Smith-Waterman** local alignment with k-best non-overlapping results
-- **Needleman-Wunsch** global alignment
+- **Needleman-Wunsch** global alignment (linear and **affine** gap costs)
+- **Multiple sequence alignment** -- progressive MSA over a neighbor-joining guide tree, parameterised by any scoring function (`pyseqalign.msa`)
+- **Relational sequence logos** -- information-content logos of aligned logical atoms, with per-column least-general generalisation, after Karwath & Kersting (ILP 2006) (`pyseqalign.logo`)
 - **Prolog-based distance functions** via SWI-Prolog integration (optional)
 - **Substitution matrices** -- BLOSUM (50, 60, 62, 70, 80, 90, 100) and PAM (50, 150, 200, 250) bundled; any NCBI-format matrix loadable from file or downloaded at runtime
 - **Nienhuys-Cheng distance** for recursive structural comparison of logical atoms
@@ -270,6 +272,33 @@ For reference, other notable systems in the field include:
 - [ILASP](https://github.com/ilaspltd/ILASP-releases) -- Answer Set Programming-based ILP
 - [Metagol](https://github.com/metagol/metagol) -- Meta-Interpretive Learning
 - [DeepStochLog](https://github.com/ML-KULeuven/deepstochlog) -- Neural-symbolic ILP combining logic and neural networks
+
+## Multiple alignment & relational logos
+
+pySeqAlign can align *and* summarise sequences of structured logical atoms,
+reproducing Karwath & Kersting, *Relational Sequence Alignments and Logos*
+(ILP 2006) — with no learning involved:
+
+```python
+from pyseqalign.msa import progressive_msa
+from pyseqalign.logo import relational_logo
+from pyseqalign.scoring.distance import AtomDistance
+
+# atoms as structured tuples: id -> (predicate, *args); 0 = gap
+atom_store = {1: ('h', 'a', 'r', 'm'), 2: ('h', 'a', 'r', 'l'), 3: ('s', 'p', 'm')}
+seqs = {'d1': [1, 2, 3], 'd2': [1, 3, 2], 'd3': [2, 3]}
+
+scoring = AtomDistance(atom_store=atom_store, gap_score=-0.5)   # Nienhuys-Cheng
+msa = progressive_msa(seqs, scoring, gap_open=-1.0, gap_extend=-0.1)
+rows = list(msa.aligned_sequences.values())
+
+relational_logo(rows, atom_store, 'logo.png', title='example fold')
+```
+
+`progressive_msa` accepts **any** scoring function, so a reward matrix learned
+by [pyREAL](https://github.com/athro/pyREAL)'s boosting can drive the alignment
+in place of the fixed distance. Runnable reproductions of the paper's SCOP and
+balloon logos are in [`examples/`](examples/).
 
 ## Fast C++ aligner (optional)
 

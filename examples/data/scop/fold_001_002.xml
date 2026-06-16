@@ -1,0 +1,97 @@
+<sequences>
+	<sequence id="d1idsa1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1cxzb_">
+		<atom>h(a,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1aqt_1">
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d3sdpa1">
+		<atom>h(a,r,s)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1mnga1">
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1srya1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1coja1">
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1bsma1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1isaa1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1ap6a1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1a36a1">
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1grj_1">
+		<atom>s(n,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(t,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>s(p,m)</atom>
+	</sequence>
+	<sequence id="d1xbl__">
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,m)</atom>
+	</sequence>
+	<sequence id="d1hdj__">
+		<atom>h(a,r,s)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,m)</atom>
+		<atom>h(t,r,s)</atom>
+	</sequence>
+	<sequence id="d1sssa1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+	<sequence id="d1b06a1">
+		<atom>h(a,r,m)</atom>
+		<atom>h(a,r,l)</atom>
+		<atom>h(a,r,l)</atom>
+	</sequence>
+</sequences>
