@@ -26,6 +26,7 @@ pySeqAlign provides Smith-Waterman (local) and Needleman-Wunsch (global) sequenc
   - **Aleph** backend -- classic ILP system (Srinivasan, 2001)
   - **Popper** backend -- modern ILP via learning from failures (Cropper & Morel, 2021)
 - **Pure Python** core -- no C extension required (unlike the legacy version)
+- **Optional fast C++ aligner** -- a pybind11 affine-gap Needleman-Wunsch kernel (`pyseqalign.accel`) for large all-pairs / iterative workloads; identical results to the Python aligner, ~100-270x faster
 
 ## Installation
 
@@ -269,6 +270,35 @@ For reference, other notable systems in the field include:
 - [ILASP](https://github.com/ilaspltd/ILASP-releases) -- Answer Set Programming-based ILP
 - [Metagol](https://github.com/metagol/metagol) -- Meta-Interpretive Learning
 - [DeepStochLog](https://github.com/ML-KULeuven/deepstochlog) -- Neural-symbolic ILP combining logic and neural networks
+
+## Fast C++ aligner (optional)
+
+The pure-Python aligners are fine for typical use. For heavy workloads (e.g.
+boosting that re-aligns thousands of sequence pairs per iteration), an optional
+**C++ affine-gap Needleman-Wunsch** kernel is provided. It is NOT built by default
+(the core stays pure Python); build it once with a C++ compiler + pybind11:
+
+```bash
+pip install pybind11
+src/pyseqalign/cpp/build_cpp_aligner.sh          # or: PY=$(which python) src/.../build_cpp_aligner.sh
+```
+
+This compiles the extension into the `pyseqalign` package. Then:
+
+```python
+from pyseqalign.accel import cpp_available, load
+assert cpp_available()
+cpp = load()                                  # the compiled module
+al = cpp.CppAligner(num_ids, gap_open, gap_extend)
+al.set_matrix(flat_score_matrix)              # (num_ids+1)^2 row-major scores
+r = al.align(query_ids, target_ids)           # r.score, r.query, r.target, r.gap_opens, ...
+```
+
+The kernel implements the same 3-matrix (M/Ix/Iy) affine recurrence as a numeric
+aligner over a dense score matrix, so its results are interchangeable with a
+pure-Python affine Needleman-Wunsch (validated bit-for-bit). If the extension is
+not built, `cpp_available()` is `False` and `load()` raises a helpful error --
+callers should fall back to the Python aligner.
 
 ## Background
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2
+
+### Added
+- Optional fast C++ affine-gap Needleman-Wunsch aligner (`pyseqalign.accel`, pybind11).
+  Numeric kernel over a dense score matrix; results interchangeable with the
+  pure-Python affine aligner (validated bit-for-bit), ~100-270x faster for heavy
+  all-pairs/iterative workloads. Not built by default (core stays pure Python);
+  build via `src/pyseqalign/cpp/build_cpp_aligner.sh`.
+
 ## 0.1.1
 
 ### Fixed
