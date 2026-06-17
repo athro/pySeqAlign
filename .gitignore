@@ -44,3 +44,14 @@ htmlcov/
 
 # Example outputs (generated logos/figures)
 examples/output/
+
+# LaTeX build intermediates (presentations)
+docs/presentation/*.aux
+docs/presentation/*.log
+docs/presentation/*.nav
+docs/presentation/*.snm
+docs/presentation/*.vrb
+docs/presentation/*.toc
+docs/presentation/*.out
+docs/presentation/*.fls
+docs/presentation/*.fdb_latexmk
